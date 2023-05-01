@@ -1,5 +1,5 @@
 {% set name = "trustme" %}
-{% set version = "0.9.0" %}
+{% set version = "1.0.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5e07b23d70ceed64f3bb36ae4b9abc52354c16c98d45ab037bee2b5fbffe586c
+  sha256: 1d4f0b0fe28091506edc29c19ad90cca387646add436c3ca66ba7bcc53807f55
 
 build:
   number: 0
