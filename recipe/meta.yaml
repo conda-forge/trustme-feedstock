@@ -36,6 +36,8 @@ test:
     - pytest-cov
     - pyopenssl
     - service_identity
+    # probably not used by newer service-identity
+    - six
 
 about:
   home: https://github.com/python-trio/trustme
