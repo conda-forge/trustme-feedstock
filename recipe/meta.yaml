@@ -5,11 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/t/trustme/trustme-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/t/trustme/trustme-{{ version }}.tar.gz
   sha256: ed2264fb46c35459e6de9e454ed4bab73be44b6a2a26ad417f9b6854aebb644a
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   noarch: python
 
@@ -17,11 +17,11 @@ requirements:
   host:
     - hatchling
     - pip
-    - python >=3.9
+    - python {{ python_min }}
   run:
     - cryptography >=3.1
     - idna >=2.0
-    - python >=3.9
+    - python >={{ python_min }}
 
 test:
   source_files:
@@ -38,6 +38,7 @@ test:
     - coverage
     - pyopenssl
     - service_identity
+    - python {{ python_min }}
 
 about:
   home: https://github.com/python-trio/trustme
